@@ -24,6 +24,11 @@ class MyTxt :
                     dict_counting_words[word] = 1
                 else :
                     dict_counting_words[word] += 1
+        
+        working_file.close()
+
+        r_dict_counting_words = {v:k for (k, v) in dict_counting_words.items()}
+        dict_counting_words = {k:v for (k, v) in sorted(r_dict_counting_words.item())}
 
         return dict_counting_words
 
@@ -43,6 +48,8 @@ class MyTxt :
                     count_i +=1
                 else :
                     continue
+        
+        working_file.close()
 
         return count_i
 
@@ -69,5 +76,10 @@ class MyTxt :
                         dict_counting_words[word] = 1
                     else :
                         dict_counting_words[word] +=1
+        
+        working_file.close()
+
+        r_dict_counting_words = {v:k for (k, v) in dict_counting_words.items()}
+        dict_counting_words = {k:v for (k, v) in sorted(r_dict_counting_words.item())}
 
         return dict_counting_words
