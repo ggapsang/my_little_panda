@@ -28,7 +28,7 @@ class MyTxt :
         working_file.close()
 
         r_dict_counting_words = {v:k for (k, v) in dict_counting_words.items()}
-        dict_counting_words = {k:v for (v, k) in sorted(r_dict_counting_words.item())}
+        dict_counting_words = {k:v for (v, k) in sorted(r_dict_counting_words.item(), reverse = True)}
 
         return dict_counting_words
 
@@ -80,6 +80,6 @@ class MyTxt :
         working_file.close()
 
         r_dict_counting_words = {v:k for (k, v) in dict_counting_words.items()}
-        dict_counting_words = {k:v for (k, v) in sorted(r_dict_counting_words.item())}
+        dict_counting_words = {k:v for (k, v) in sorted(r_dict_counting_words.item(), reverse = True)}
 
         return dict_counting_words
